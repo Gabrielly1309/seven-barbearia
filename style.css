@@ -1,0 +1,266 @@
+/* Reset básico e fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0d0d0d; /* Um preto mais profundo e moderno, igual ao fundo do Instagram deles */
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Títulos imponentes em estilo Cinzel (Retrô/Chique) */
+h1, h2, h3, .logo {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Menu Superior */
+header {
+    background-color: #0b0b0b;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+nav a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-left: 30px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Banner Principal (Hero) */
+.hero {
+    background-color: #181818; /* Dica: Depois colocaremos uma foto escura aqui de fundo */
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    border-bottom: 1px solid #222;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    color: #888888;
+    font-weight: 300;
+}
+
+.btn-agendar {
+    display: inline-block;
+    padding: 15px 40px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-agendar:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Estilo das seções */
+section {
+    padding: 100px 20px; /* 100px em cima e embaixo, 20px nas laterais */
+    text-align: center;
+}
+
+.section-dark {
+    background-color: #0d0d0d; 
+}
+
+.section-gray {
+    background-color: #161616; /* Esse tom sutilmente mais claro vai destacar as fotos e os cards dos barbeiros! */
+}
+
+.subtitle {
+    display: block;
+    font-size: 0.75rem;
+    color: #888888;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* Pequena linha embaixo do título */
+section h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 15px auto 0 auto;
+}
+
+.text-block {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #bbbbbb;
+    font-weight: 300;
+}
+
+/* Container de Cards da Equipe */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: stretch; /* MÁGICA: Isso força todos os cards da mesma linha a esticarem e terem o mesmo tamanho! */
+}
+
+.card {
+    background-color: #111111;
+    border: 1px solid #222;
+    padding: 20px;
+    /* Trocamos 300px por uma porcentagem que força a divisão exata de 3 por linha! */
+    width: 28%; 
+    min-width: 280px; /* Garante que em telas muito pequenas eles não fiquem espremidos demais */
+    text-align: left;
+    transition: border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    border-color: #555;
+}
+
+.card-img-placeholder {
+    background-color: #222;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.1rem;
+    margin-top: 15px;      /* Cria um espaço entre a foto e o nome */
+    margin-bottom: 5px;   /* Cria um espaço entre o nome e a especialidade */
+    color: #ffffff;
+}
+
+.card p {
+    font-size: 0.85rem;
+    color: #888888;
+}
+
+/* Rodapé Superior */
+footer {
+    background-color: #0b0b0b;
+    padding: 80px 50px 30px 50px;
+    border-top: 1px solid #222;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-box {
+    min-width: 200px;
+}
+
+.footer-box h3 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.footer-box p {
+    font-size: 0.85rem;
+    color: #888888;
+    margin-bottom: 10px;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.75rem;
+    color: #444444;
+}
+
+/* Container de cada Barbeiro */
+.card-equipe {
+    background-color: #111111;
+    border: 1px solid #222;
+    padding: 20px;
+    width: 28%;
+    min-width: 280px;
+    text-align: center; /* Centraliza o nome e foto */
+    border-radius: 4px;
+}
+
+/* Caixa que segura a foto para mantê-las todas no mesmo padrão */
+.foto-container {
+    width: 100%;
+    height: 400px; /* Altura padrão para as fotos ficarem alinhadas */
+    overflow: hidden; /* Corta o que sobrar da imagem */
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+/* Estilo da Imagem e o efeito de zoom suave ao passar o mouse */
+.foto-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a foto preencher o espaço sem distorcer ou esticar */
+    transition: transform 0.5s ease; /* Transição suave para o movimento */
+}
+
+/* O toque sofisticado: quando passa o mouse no card, a foto dá um leve zoom, igual aos sites caros! */
+.card-equipe:hover .foto-container img {
+    transform: scale(1.05); /* Dá um zoom sutil de 5% na imagem */
+}
