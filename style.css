@@ -26,21 +26,19 @@ h1, h2, h3, .logo {
 /* Menu Superior */
 header {
     background-color: #0b0b0b;
-    padding: 25px 50px;
+    padding: 15px 50px; /* Se o header ficar muito grande, diminua um pouco estes 15px */
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #222;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
-
 .logo {
     color: #ffffff;
     font-size: 1.4rem;
     font-weight: 700;
 }
+
+
 
 nav a {
     color: #aaaaaa;
@@ -57,14 +55,26 @@ nav a:hover {
 
 /* Banner Principal (Hero) */
 .hero {
-    background-color: #181818; /* Dica: Depois colocaremos uma foto escura aqui de fundo */
-    height: 70vh;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('imagens/fundo-barbearia.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Coloca um elemento abaixo do outro */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center;     /* Centraliza horizontalmente */
+    color: white;
     text-align: center;
-    padding: 0 20px;
-    border-bottom: 1px solid #222;
+    padding: 0 20px;         /* Garante um respiro nas laterais em telas pequenas */
+}
+
+.logo-hero {
+    max-width: 250px; /* Ajuste o tamanho conforme preferir */
+    width: 100%;
+    margin-bottom: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-content h2 {
@@ -150,47 +160,54 @@ section h2::after {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-    align-items: stretch; /* MÁGICA: Isso força todos os cards da mesma linha a esticarem e terem o mesmo tamanho! */
+    align-items: stretch;
+    padding: 0 20px; /* Adiciona respiro nas laterais */
 }
 
 .card {
     background-color: #111111;
     border: 1px solid #222;
-    padding: 20px;
-    /* Trocamos 300px por uma porcentagem que força a divisão exata de 3 por linha! */
-    width: 28%; 
-    min-width: 280px; /* Garante que em telas muito pequenas eles não fiquem espremidos demais */
-    text-align: left;
-    transition: border-color 0.3s;
+    /* Removemos o padding interno para a foto encostar nas bordas */
+    padding: 0 0 20px 0; 
+    /* Mudamos de 28% para 260px fixo ou uma % menor para caberem 2 ou 3 por linha */
+    width: 280px; 
+    text-align: center; /* Centralizamos o texto, pois combina melhor com fotos */
+    transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
 .card:hover {
-    border-color: #555;
+    border-color: #ffffff;
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
 }
 
-.card-img-placeholder {
-    background-color: #222;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8rem;
-    color: #555;
+/* Novo estilo para a sua foto */
+.card-img {
+    width: 100%;
+    height: 280px;      /* Aumentado de 180px para 280px para dar mais destaque aos vídeos */
+    object-fit: cover;  /* Mantém o vídeo preenchendo o espaço sem distorcer */
     margin-bottom: 20px;
+    border-radius: 4px 4px 0 0;
+}
+
+/* Ajuste para o texto não ficar colado nas laterais */
+.card h3, .card p {
+    padding: 0 15px;
+    text-align: center;
 }
 
 .card h3 {
     font-size: 1.1rem;
-    margin-top: 15px;      /* Cria um espaço entre a foto e o nome */
-    margin-bottom: 5px;   /* Cria um espaço entre o nome e a especialidade */
+    margin-top: 10px;
+    margin-bottom: 10px;
     color: #ffffff;
 }
 
 .card p {
     font-size: 0.85rem;
     color: #888888;
+    line-height: 1.5;
 }
 
 /* Rodapé Superior */
@@ -263,4 +280,132 @@ footer {
 /* O toque sofisticado: quando passa o mouse no card, a foto dá um leve zoom, igual aos sites caros! */
 .card-equipe:hover .foto-container img {
     transform: scale(1.05); /* Dá um zoom sutil de 5% na imagem */
+}
+
+/* --- Novo Estilo do Menu com Logo --- */
+
+.logo-container {
+    display: flex;
+    align-items: center; 
+    gap: 15px;           
+}
+
+.nav-logo {
+    height: 60px; /* Aumentei para 60px. Ajuste conforme sua preferência! */
+    width: auto;
+}
+
+.logo-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.marca-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Para ficar bonito também no celular */
+}
+
+.marca-texto {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.marca-imagem {
+    flex: 1;
+    min-width: 300px;
+}
+
+.marca-imagem img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.section-light {
+    background-color: #0d0d0d; 
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    color: #ffffff !important;
+    margin-bottom: 40px;
+}
+
+.horarios-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.horario-card {
+    background-color: #161616; 
+    border: 1px solid #222;    
+    padding: 20px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.dia { 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    margin-bottom: 10px; 
+    color: #ffffff !important; 
+}
+
+.hora { 
+    font-weight: bold; 
+    color: #ffffff !important; 
+}
+
+.texto-as { 
+    font-size: 0.8rem; 
+    color: #888 !important; 
+    margin: 5px 0; 
+}
+
+/* Efeito ao passar o mouse */
+.horario-card:hover {
+    border-color: #ffffff;
+}
+
+.contato-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 400px;
+    margin: 30px auto 0 auto;
+}
+
+.btn-contato {
+    width: 100%;
+    padding: 18px;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.btn-contato:hover {
+    background-color: #ffffff;
+    color: #000000;
 }
