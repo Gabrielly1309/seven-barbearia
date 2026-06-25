@@ -409,3 +409,29 @@ footer {
     background-color: #ffffff;
     color: #000000;
 }
+
+/* --- AJUSTE PARA CELULAR --- */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Coloca o logo em cima e os links embaixo */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap; /* Permite que os links pulem de linha se não couberem */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 0; /* Remove a margem fixa para centralizar melhor */
+        font-size: 0.75rem; /* Diminui um pouco a fonte para caber tudo */
+    }
+
+    .marca-container {
+        flex-direction: column; /* Nas seções, coloca imagem e texto um embaixo do outro */
+        gap: 30px;
+    }
+}
