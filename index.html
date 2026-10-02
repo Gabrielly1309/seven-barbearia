@@ -2,239 +2,288 @@
 <html lang="pt-BR">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XDD5KG9MTE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XDD5KG9MTE');
-</script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XDD5KG9MTE');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <title>Seven Barbearia</title>
-    <!-- IMPORTANTE: Esta linha conecta o seu CSS -->
+    <title>Seven Barbearia | Excelência e Estilo em Mogi das Cruzes</title>
+    <!-- CSS Principal -->
     <link rel="stylesheet" href="style.css">
-    <!-- Importação das fontes -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Fontes Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome para ícones profissionais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Menu Superior -->
-<header>
-    <div class="logo-container">
-        <!-- O caminho aqui deve ser o da sua imagem transparente -->
-        <img src="imagens/logo-seven.png" alt="Logo" class="nav-logo">
-        <div class="logo-text">SEVEN BARBEARIA</div>
-    </div>
-    
-    <nav>
-        <a href="#marca">NOSSA MARCA</a>
-        <a href="#servicos">SERVIÇOS</a>
-        <a href="#equipe">EQUIPE</a>
-        <a href="#contato">💈 RESERVE JÁ 💈</a>
-    </nav>
-</header>
+    <!-- Menu Superior Fixo (Glassmorphism) -->
+    <header>
+        <div class="logo-container">
+            <a href="#">
+                <img src="imagens/logo-seven.png" alt="Seven Barbearia Logo" class="nav-logo">
+            </a>
+        </div>
+        
+        <nav>
+            <a href="#marca">A MARCA</a>
+            <a href="#servicos">SERVIÇOS</a>
+            <a href="#cursos">CURSOS</a>
+            <a href="#horarios">HORÁRIOS</a>
+            <a href="#equipe">EQUIPE</a>
+        </nav>
 
-    <!-- Banner Principal -->
+        <div class="header-action">
+            <a href="#contato" class="btn-nav-cta"><i class="fa-solid fa-calendar-check"></i> AGENDAR AGORA</a>
+        </div>
+    </header>
+
+    <!-- Banner Principal (Hero Cinemática) -->
     <section class="hero">
-       
+        <div class="hero-overlay"></div>
         <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fa-solid fa-star"></i> REFERÊNCIA EM MOGI DAS CRUZES
+            </div>
             <h2>ELEGÂNCIA EM CADA DETALHE</h2>
-            <p>Um visual bem alinhado faz toda a diferença. Venha viver a experiência Seven.</p>
-            <a href="#contato" class="btn-agendar">AGENDAR SEU HORÁRIO</a>
+            <p>Mais do que um corte, uma experiência completa de estilo e cuidado para o homem moderno.</p>
+            
+            <div class="hero-buttons">
+                <a href="https://sevenb.booksy.com/a/" target="_blank" class="btn-primary">
+                    <i class="fa-solid fa-scissors"></i> AGENDAR PELO BOOKSY
+                </a>
+                <a href="https://wa.me/11954555269" target="_blank" class="btn-whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> CHAMAR NO WHATSAPP
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- Seção Nossa Marca -->
- <section id="marca" class="section-dark">
-    <div class="marca-container">
-        <div class="marca-texto">
-            <span class="subtitle">CONCEITO SEVEN</span>
-            <h2>NOSSA MARCA</h2>
-            <p>A Seven Barbearia nasceu para trazer um novo padrão de estilo. Nosso objetivo é ir além do corte perfeito: cuidamos de cada detalhe com precisão e elegância para que você encontre a sua melhor versão.</p>
-            <p>Um ambiente moderno e preparado para o homem que valoriza um visual bem alinhado.</p>
+    <section id="marca" class="section-dark">
+        <div class="marca-container">
+            <div class="marca-texto">
+                <span class="subtitle">CONCEITO SEVEN</span>
+                <h2>TRADIÇÃO E MODERNIDADE</h2>
+                <p>A Seven Barbearia nasceu com o propósito de elevar o padrão do cuidado masculino. Nosso espaço foi pensado nos mínimos detalhes para oferecer conforto, um ambiente refinado e profissionais altamente qualificados.</p>
+                <p>Aqui você encontra o alinhamento perfeito entre as técnicas clássicas de barbearia e as tendências mais modernas do visagismo.</p>
+                <div class="marca-features">
+                    <div class="feature-item"><i class="fa-solid fa-check"></i> Produtos Premium</div>
+                    <div class="feature-item"><i class="fa-solid fa-check"></i> Ambiente Exclusivo</div>
+                    <div class="feature-item"><i class="fa-solid fa-check"></i> Atendimento com Hora Marcada</div>
+                </div>
+            </div>
+            <div class="marca-imagem">
+                <img src="imagens/salao.JPG" alt="Ambiente Seven Barbearia">
+            </div>
         </div>
-        <div class="marca-imagem">
-            <!-- Substitua pelo caminho da sua foto do ambiente -->
-            <img src="imagens/ambiente-seven.jpg" alt="Ambiente Seven Barbearia">
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Seção Serviços (Nova!) -->
-    <section id="servicos" class="section-dark">
+    <!-- Seção Serviços Exclusivos -->
+    <section id="servicos" class="section-gray">
         <span class="subtitle">O QUE FAZEMOS</span>
         <h2>SERVIÇOS EXCLUSIVOS</h2>
         
- <div class="cards-container">
-    <!-- Serviço 1: Corte -->
-    <div class="card">
-        <video class="card-img" autoplay muted loop playsinline poster="imagens/corte-seven.jpg">
-            <source src="videos/corte-seven.mp4" type="video/mp4">
-        </video>
-        <h3>CORTE SEVEN</h3>
-        <p>Corte personalizado, lavatório com produtos premium e finalização estilizada.</p>
-    </div>
+        <div class="cards-container">
+            <!-- Serviço 1 -->
+            <div class="card">
+                <video class="card-img" autoplay muted loop playsinline poster="imagens/corte-seven.jpg">
+                    <source src="videos/corte-seven.mp4" type="video/mp4">
+                </video>
+                <h3>CORTE SEVEN</h3>
+                <p>Corte personalizado com técnica avançada, lavatório com produtos premium e finalização impecável.</p>
+            </div>
 
-    <!-- Serviço 2: Barba -->
-    <div class="card">
-        <video class="card-img" autoplay muted loop playsinline poster="imagens/barba-premium.jpg">
-            <source src="videos/barba-premium.mp4" type="video/mp4">
-        </video>
-        <h3>BARBA PREMIUM</h3>
-        <p>Barba desenhada com navalha, combinando a tradicional toalha quente e terapia com vapor de ozônio.</p>
-    </div>
+            <!-- Serviço 2 -->
+            <div class="card">
+                <video class="card-img" autoplay muted loop playsinline poster="imagens/barba-premium.jpg">
+                    <source src="videos/barba-premium.mp4" type="video/mp4">
+                </video>
+                <h3>BARBA PREMIUM</h3>
+                <p>Barba desenhada com navalha, toalha quente e terapia com vapor de ozônio para máximo relaxamento.</p>
+            </div>
 
-    <!-- Serviço 3: Depilação -->
-    <div class="card">
-        <video class="card-img" autoplay muted loop playsinline poster="imagens/depilacao.jpg">
-            <source src="videos/depilacao.mp4" type="video/mp4">
-        </video>
-        <h3>DEPILAÇÃO MASCULINA</h3>
-        <p>Remoção de pelos indesejados nas regiões nasal e do ouvido com técnicas rápidas e confortáveis.</p>
-    </div>
+            <!-- Serviço 3 -->
+            <div class="card">
+                <video class="card-img" autoplay muted loop playsinline poster="imagens/depilacao.jpg">
+                    <source src="videos/depilacao.mp4" type="video/mp4">
+                </video>
+                <h3>DEPILAÇÃO MASCULINA</h3>
+                <p>Remoção de pelos indesejados nas regiões nasal e auricular com total segurança, rapidez e conforto.</p>
+            </div>
 
-    <!-- Serviço 4: Limpeza -->
-    <div class="card">
-        <video class="card-img" autoplay muted loop playsinline poster="imagens/limpeza-pele.jpg">
-            <source src="videos/limpeza-pele.mp4" type="video/mp4">
-        </video>
-        <h3>LIMPEZA DE PELE</h3>
-        <p>Tratamento facial profundo para remoção de impurezas, oleosidade e renovação da pele.</p>
-    </div>
-</div>
-
+            <!-- Serviço 4 -->
+            <div class="card">
+                <video class="card-img" autoplay muted loop playsinline poster="imagens/limpeza-pele.jpg">
+                    <source src="videos/limpeza-pele.mp4" type="video/mp4">
+                </video>
+                <h3>LIMPEZA DE PELE</h3>
+                <p>Tratamento facial profundo para desobstrução de poros, controle de oleosidade e renovação celular.</p>
+            </div>
         </div>
-        </section>
+    </section>
 
-<section id="horarios" class="section-light">
-    <h2 class="section-title">HORÁRIOS DE ATENDIMENTO</h2>
-    
-    <div class="horarios-container">
-        <!-- SEG -->
-        <div class="horario-card">
-            <span class="dia">SEG</span>
-            <span class="hora">09:00</span>
-            <span class="texto-as">às</span>
-            <span class="hora">20:00</span>
-        </div>
-        <!-- TER -->
-        <div class="horario-card">
-            <span class="dia">TER</span>
-            <span class="hora">09:00</span>
-            <span class="texto-as">às</span>
-            <span class="hora">20:00</span>
-        </div>
-        <!-- QUA -->
-        <div class="horario-card">
-            <span class="dia">QUA</span>
-            <span class="hora">09:00</span>
-            <span class="texto-as">às</span>
-            <span class="hora">20:00</span>
-        </div>
-        <!-- QUI -->
-        <div class="horario-card">
-            <span class="dia">QUI</span>
-            <span class="hora">09:00</span>
-            <span class="texto-as">às</span>
-            <span class="hora">20:00</span>
-        </div>
-        <!-- SEX -->
-        <div class="horario-card">
-            <span class="dia">SEX</span>
-            <span class="hora">09:00</span>
-            <span class="texto-as">às</span>
-            <span class="hora">20:00</span>
-        </div>
-        <!-- SÁB -->
-        <div class="horario-card">
-            <span class="dia">SÁB</span>
-            <span class="hora">09:00</span>
-            <span class="texto-as">às</span>
-            <span class="hora">20:00</span>
-        </div>
-    </div>
-</section>
+    <!-- Seção Cursos Profissionais -->
+    <section id="cursos" class="section-dark">
+        <span class="subtitle">FORMAÇÃO PROFISSIONAL</span>
+        <h2>CURSOS DE BARBEIRO</h2>
+        <p style="color: #a3a3a3; max-width: 700px; margin: 0 auto 40px auto; font-weight: 300;">
+            Torne-se um profissional completo com nossa capacitação prática e teórica. Aprenda do zero ou aperfeiçoe suas habilidades com quem é referência na área.
+        </p>
+        
+        <div class="marca-container" style="background-color: #121212; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 40px; text-align: left;">
+            <div class="marca-texto">
+                <span class="subtitle">METODOLOGIA EXCLUSIVA</span>
+                <h3 style="color: #ffffff; font-family: 'Cinzel', serif; font-size: 1.6rem; margin-bottom: 15px;">FORMAÇÃO DE BARBEIRO MASTER</h3>
+                <p>Curso completo com duração de <strong>3 meses</strong>, focado em colocar o aluno direto no mercado de trabalho com total confiança e técnica apurada.</p>
+                
+                <div class="marca-features">
+                    <div class="feature-item"><i class="fa-solid fa-graduation-cap"></i> Técnicas Avançadas de Corte</div>
+                    <div class="feature-item"><i class="fa-solid fa-graduation-cap"></i> Visagismo e Acabamento</div>
+                    <div class="feature-item"><i class="fa-solid fa-graduation-cap"></i> Química, Tintura e Descoloração</div>
+                    <div class="feature-item"><i class="fa-solid fa-graduation-cap"></i> Aulas Práticas com Acompanhamento</div>
+                </div>
 
-<section id="avaliacoes" class="section-dark">
-    <h2 class="section-title">O QUE DIZEM NOSSOS CLIENTES</h2>
-    
-    <!-- O Script deve vir antes da Div -->
-    <script src="https://elfsightcdn.com/platform.js" async></script>
-    <div class="elfsight-app-ffd6c795-3a38-4e28-8bc1-192576efcb3d" data-elfsight-app-lazy></div>
-</section>
+                <div style="margin-top: 30px;">
+                    <a href="https://wa.me/11954555269?text=Olá! Gostaria de saber mais informações sobre os próximos cursos de barbearia." target="_blank" class="btn-primary" style="display: inline-flex;">
+                        <i class="fa-brands fa-whatsapp"></i> QUERO SABER SOBRE AS TURMAS
+                    </a>
+                </div>
+            </div>
+            
+            <div class="marca-imagem" style="text-align: center;">
+                <img src="imagens/curso.jpeg" alt="Curso de Barbearia Seven" style="border-radius: 8px;">
+            </div>
+        </div>
+    </section>
 
-<section id="contato" class="section-dark">
-    <h2 class="section-title">CONTATO & AGENDAMENTO</h2>
-    <div class="contato-container">
-        <a href="https://www.google.com/maps/dir/-23.5015312,-46.2010844/Seven+Barbearia,+R.+Gon%C3%A7alo+Ferreira,+187+-+Jardim+Pte.+Grande,+Mogi+das+Cruzes+-+SP,+08770-460/@-23.5060247,-46.2097229,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94cdd7431cef1d79:0x3bd8e06d4815cce!2m2!1d-46.2076779!2d-23.5109067?entry=ttu&g_ep=EgoyMDI2MDYyMS4wIKXMDSoASAFQAw%3D%3D" class="btn-contato" target="_blank">Como chegar</a>
-        <a href="https://sevenb.booksy.com/a/" class="btn-contato" target="_blank">Agende Online</a>
-        <a href="https://wa.me/11954555269" class="btn-contato" target="_blank">WhatsApp</a>
-        <a href="https://www.instagram.com/sevenbarbearia_?igsh=MzBmMHd6ZzNmb2ww" class="btn-contato" target="_blank">Siga no Instagram</a>
-    </div>
-</section>
+    <!-- Seção Horários -->
+    <section id="horarios" class="section-gray">
+        <span class="subtitle">FUNCIONAMENTO</span>
+        <h2 class="section-title">HORÁRIOS DE ATENDIMENTO</h2>
+        
+        <div class="horarios-container">
+            <div class="horario-card">
+                <span class="dia">SEG</span>
+                <span class="hora">09:00</span>
+                <span class="texto-as">às</span>
+                <span class="hora">20:00</span>
+            </div>
+            <div class="horario-card active">
+                <span class="dia">TER</span>
+                <span class="hora">09:00</span>
+                <span class="texto-as">às</span>
+                <span class="hora">20:00</span>
+            </div>
+            <div class="horario-card">
+                <span class="dia">QUA</span>
+                <span class="hora">09:00</span>
+                <span class="texto-as">às</span>
+                <span class="hora">20:00</span>
+            </div>
+            <div class="horario-card">
+                <span class="dia">QUI</span>
+                <span class="hora">09:00</span>
+                <span class="texto-as">às</span>
+                <span class="hora">20:00</span>
+            </div>
+            <div class="horario-card">
+                <span class="dia">SEX</span>
+                <span class="hora">09:00</span>
+                <span class="texto-as">às</span>
+                <span class="hora">20:00</span>
+            </div>
+            <div class="horario-card">
+                <span class="dia">SÁB</span>
+                <span class="hora">09:00</span>
+                <span class="texto-as">às</span>
+                <span class="hora">20:00</span>
+            </div>
+        </div>
+    </section>
 
+    <!-- Seção Avaliações (Elfsight) -->
+    <section class="section-dark">
+        <span class="subtitle">DEPOIMENTOS</span>
+        <h2 class="section-title">O QUE DIZEM NOSSOS CLIENTES</h2>
+        <script src="https://elfsightcdn.com/platform.js" async></script>
+        <div class="elfsight-app-ffd6c795-3a38-4e28-8bc1-192576efcb3d" data-elfsight-app-lazy></div>
+    </section>
 
-
-    <!-- Seção Equipe em Blocos Modernos -->
+    <!-- Seção Equipe / Especialistas -->
     <section id="equipe" class="section-gray">
         <span class="subtitle">PROFISSIONAIS</span>
         <h2>NOSSO TIME DE ESPECIALISTAS</h2>
         
         <div class="cards-container">
-            <!-- Barbeiro 1 -->
             <div class="card-equipe">
                 <div class="foto-container">
-                    <!-- Substitua o nome do arquivo pela foto real do primeiro barbeiro -->
-                    <img src="imagens/barbeiro1.jpg" alt="Foto do Barbeiro 1">
+                    <img src="imagens/barbeiro1.jpg" alt="Gregory">
                 </div>
                 <h3>Gregory</h3>
-                
-            </div>
-            
-            <!-- Barbeiro 2 -->
-            <div class="card-equipe">
-                <div class="foto-container">
-                    <!-- Substitua o nome do arquivo pela foto real do segundo barbeiro -->
-                    <img src="imagens/barbeiro2.jpg" alt="Foto do Barbeiro 2">
-                </div>
-                <h3>Matheus</h3>
               
             </div>
             
-            <!-- Barbeiro 3 -->
             <div class="card-equipe">
                 <div class="foto-container">
-                    <!-- Substitua o nome do arquivo pela foto real do seu marido ou terceiro barbeiro -->
-                    <img src="imagens/barbeiro3.jpg" alt="Foto do Barbeiro 3">
+                    <img src="imagens/barbeiro2.jpg" alt="Matheus">
+                </div>
+                <h3>Matheus</h3>
+               
+            </div>
+            
+            <div class="card-equipe">
+                <div class="foto-container">
+                    <img src="imagens/barbeiro3.jpg" alt="Caue">
                 </div>
                 <h3>Caue</h3>
-                
+          
             </div>
         </div>
     </section>
 
-    <!-- Rodapé Elegante com Contatos Reais -->
-    <footer id="contato">
+    <!-- Seção Contato Rápido & CTA Final -->
+    <section id="contato" class="section-dark text-center">
+        <span class="subtitle">VENHA NOS CONHECER</span>
+        <h2 class="section-title">FAÇA SEU AGENDAMENTO</h2>
+        <p style="color: #a3a3a3; margin-bottom: 30px; font-weight: 300;">Escolha a forma mais prática para garantir o seu horário:</p>
+        
+        <div class="contato-container">
+            <a href="https://sevenb.booksy.com/a/" class="btn-contato primary-glow" target="_blank">
+                <i class="fa-solid fa-calendar-days"></i> Agendar Online (Booksy)
+            </a>
+            <a href="https://wa.me/11954555269" class="btn-contato" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Falar pelo WhatsApp
+            </a>
+            <a href="https://www.google.com/maps/dir/-23.5015312,-46.2010844/Seven+Barbearia" class="btn-contato" target="_blank">
+                <i class="fa-solid fa-location-dot"></i> Como Chegar (Google Maps)
+            </a>
+            <a href="https://www.instagram.com/sevenbarbearia_" class="btn-contato" target="_blank">
+                <i class="fa-brands fa-instagram"></i> Siga no Instagram
+            </a>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
         <div class="footer-container">
             <div class="footer-box">
                 <h3>HORÁRIOS</h3>
-                <p>Segunda : 13h às 20h</p>
-                <p>Terça a Sábado: 09h às 20h</p>
+                <p>Segunda a sábado: 09h às 20h</p>
             </div>
             
             <div class="footer-box">
                 <h3>CONTATO</h3>
-                <!-- Troque pelo número real da Seven -->
-                <p>WhatsApp: (11) 954555269</p> 
-                <!-- Troque pelo @ real do Instagram deles -->
+                <p>WhatsApp: (11) 95455-5269</p>
                 <p>Instagram: @sevenbarbearia_</p>
             </div>
             
             <div class="footer-box">
                 <h3>ENDEREÇO</h3>
-                <!-- Coloque a rua, número e bairro real da barbearia -->
                 <p>Rua Gonçalo Ferreira, Nº 187</p>
                 <p>Jardim Ponte Grande - Mogi das Cruzes - SP</p>
             </div>
