@@ -23,6 +23,11 @@ h1, h2, h3 {
     letter-spacing: 2px;
 }
 
+/* Garante que links de botões não fiquem azuis ou sublinhados por padrão */
+a {
+    text-decoration: none;
+}
+
 /* --- MENU SUPERIOR FIXO COM EFEITO VIDRO --- */
 header {
     position: fixed;
@@ -42,8 +47,6 @@ header {
 .logo-container {
     display: flex;
     align-items: center; 
-    flex: 1;
-    justify-content: flex-start;
 }
 
 .nav-logo {
@@ -62,7 +65,6 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 2;
     gap: 35px;
 }
 
@@ -71,7 +73,6 @@ nav a {
     text-decoration: none;
     font-size: 0.78rem;
     font-weight: 600;
-    margin-left: 0;
     transition: color 0.3s ease;
     letter-spacing: 1.5px;
 }
@@ -82,9 +83,8 @@ nav a:hover {
 
 /* Container da Direita para o Botão */
 .header-action {
-    flex: 1;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
 }
 
 /* Botão de Destaque no Menu (Canto Direito) */
@@ -102,7 +102,6 @@ nav a:hover {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin-left: 0 !important;
 }
 
 .btn-nav-cta:hover {
@@ -120,7 +119,7 @@ nav a:hover {
     justify-content: center;
     text-align: center;
     position: relative;
-    padding: 0 20px;
+    padding: 100px 20px 0 20px; /* Compensa o menu fixo */
 }
 
 .hero-overlay {
@@ -589,11 +588,9 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
         gap: 12px;
-        flex: none;
     }
 
     nav a {
-        margin-left: 0;
         font-size: 0.7rem;
     }
 
